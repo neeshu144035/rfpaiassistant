@@ -42,7 +42,10 @@ const FileUpload = ({ onFileUpload, uploadedFile }) => {
           </div>
           <button 
             className="remove-file-btn"
-            onClick={() => onFileUpload(null)}
+            onClick={() => {
+              console.log('Remove button clicked in FileUpload');
+              onFileUpload(null);
+            }}
           >
             Remove
           </button>

@@ -40,7 +40,10 @@ const KnowledgeBaseUpload = ({ onFileUpload, uploadedFile }) => {
           </div>
           <button 
             className="remove-file-btn"
-            onClick={() => onFileUpload(null)}
+            onClick={() => {
+              console.log('Remove button clicked in KnowledgeBaseUpload');
+              onFileUpload(null);
+            }}
           >
             Remove
           </button>

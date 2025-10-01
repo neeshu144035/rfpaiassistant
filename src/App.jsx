@@ -18,8 +18,10 @@ const App = () => {
   const [knowledgeBaseFile, setKnowledgeBaseFile] = useState(null)
 
   const handleFileUpload = (file) => {
+    console.log('handleFileUpload called with:', file);
     // Handle file removal
     if (file === null) {
+      console.log('Removing RFP file');
       setUploadedFile(null)
       setError(null)
       return
@@ -41,8 +43,10 @@ const App = () => {
   }
 
   const handleKnowledgeBaseUpload = (file) => {
+    console.log('handleKnowledgeBaseUpload called with:', file);
     // Handle file removal
     if (file === null) {
+      console.log('Removing knowledge base file');
       setKnowledgeBaseFile(null)
       setError(null)
       return
