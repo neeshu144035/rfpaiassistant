@@ -77,6 +77,54 @@ body {
   width: 100%;
 }
 
+.view-toggle {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: var(--spacing-md);
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-light);
+  border-bottom: 3px solid transparent;
+}
+
+.toggle-btn.active {
+  color: var(--primary-blue);
+  border-bottom: 3px solid var(--primary-blue);
+}
+
+.tab-navigation {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: var(--spacing-md);
+}
+
+.tab-btn {
+  background-color: transparent;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-light);
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+  color: var(--primary-blue);
+  border-bottom: 3px solid var(--primary-blue);
+}
+
 .form-actions {
   margin-top: var(--spacing-xl);
   text-align: center;
@@ -94,6 +142,8 @@ body {
   transition: all 0.2s ease-in-out;
   width: 100%;
   max-width: 300px;
+  margin: 0 auto var(--spacing-md);
+  display: block;
 }
 
 .submit-btn:hover:not(:disabled) {
@@ -108,6 +158,33 @@ body {
   opacity: 0.6;
 }
 
+.secondary-btn {
+  background-color: var(--text-light);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: var(--spacing-md) auto;
+  display: block;
+}
+
+.secondary-btn:hover:not(:disabled) {
+  background-color: #5a6268;
+  transform: scale(1.02);
+}
+
+.secondary-btn:disabled {
+  background-color: var(--text-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .error-message {
   margin-top: var(--spacing-md);
   padding: var(--spacing-md);
@@ -115,6 +192,17 @@ body {
   border: 1px solid var(--error-red);
   border-radius: 4px;
   color: var(--error-red);
+  text-align: center;
+}
+
+.success-message {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: rgba(40, 167, 69, 0.1);
+  border: 1px solid var(--success-green);
+  border-radius: 4px;
+  color: var(--success-green);
+  text-align: center;
 }
 
 .retry-btn {
@@ -149,6 +237,20 @@ body {
   
   .app-header {
     padding: var(--spacing-md);
+  }
+  
+  .view-toggle {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .toggle-btn {
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .toggle-btn.active {
+    border-bottom: 1px solid var(--primary-blue);
   }
 }
 

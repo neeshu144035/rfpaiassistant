@@ -24,12 +24,6 @@ const RfpDigestCard = ({ digest }) => {
       items.languages = languagesMatch[1]
     }
     
-    // Extract KPIs
-    const kpisMatch = summary.match(/KPIs include\s+([^,.]+(?:,\s*[^,.]+)*?)(?=\.)/i)
-    if (kpisMatch) {
-      items.kpis = kpisMatch[1]
-    }
-    
     // Extract budget
     const budgetMatch = summary.match(/Total budget is\s+([^\s]+)/i)
     if (budgetMatch) {
@@ -68,7 +62,6 @@ const RfpDigestCard = ({ digest }) => {
       summary: 'Summary',
       markets: 'Markets',
       languages: 'Languages',
-      kpis: 'KPIs',
       budget: 'Budget',
       timeline: 'Timeline',
       deliverables: 'Deliverables',
@@ -77,8 +70,8 @@ const RfpDigestCard = ({ digest }) => {
     return fieldNames[key] || key.charAt(0).toUpperCase() + key.slice(1)
   }
 
-  // Fields to highlight
-  const highlightFields = ['budget', 'kpis']
+  // Fields to highlight (excluding KPIs as requested)
+  const highlightFields = ['budget']
 
   return (
     <div className="rfp-digest-card">
