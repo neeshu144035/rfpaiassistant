@@ -2,6 +2,8 @@
 
 A professional web application that enables clients to upload PDF RFPs, process them through an n8n workflow, and receive beautifully formatted proposals with PDF download capability.
 
+**Latest Update**: Added back button to knowledge base view for improved navigation.
+
 ## Features
 
 - **PDF Upload Interface**: Drag-and-drop file uploader with validation (PDF only, <10MB)
