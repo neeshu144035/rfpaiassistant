@@ -5,6 +5,7 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: var(--spacing-lg);
+  width: 100%;
 }
 
 .proposal-package h2 {
@@ -17,6 +18,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
+  width: 100%;
 }
 
 .package-section:last-child {
@@ -30,6 +32,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 100%;
 }
 
 .section-header h3 {
@@ -40,6 +43,7 @@
 .section-content {
   padding: var(--spacing-lg);
   background-color: var(--white);
+  width: 100%;
 }
 
 .section-content p {
@@ -54,6 +58,7 @@
   display: flex;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .budget-option {
@@ -62,6 +67,7 @@
   background-color: #f8f9fa;
   padding: var(--spacing-md);
   border-radius: 4px;
+  width: 100%;
 }
 
 .budget-option h4 {
@@ -79,5 +85,27 @@
   
   .budget-option {
     min-width: 100%;
+  }
+  
+  .proposal-package {
+    padding: var(--spacing-md);
+  }
+  
+  .section-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .section-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .budget-option {
+    padding: var(--spacing-sm);
   }
 }

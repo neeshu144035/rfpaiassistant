@@ -5,6 +5,7 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: var(--spacing-lg);
+  width: 100%;
 }
 
 .deck-components h2 {
@@ -14,6 +15,7 @@
 
 .deck-section {
   margin-bottom: var(--spacing-xl);
+  width: 100%;
 }
 
 .deck-section:last-child {
@@ -44,6 +46,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-md);
+  width: 100%;
 }
 
 .creator-card {
@@ -84,5 +87,31 @@
   
   .creator-card {
     min-width: 100%;
+  }
+  
+  .deck-components {
+    padding: var(--spacing-md);
+  }
+  
+  .executive-summary {
+    padding: var(--spacing-md);
+  }
+  
+  .summary-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deck-section {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .creator-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .summary-content {
+    font-size: 0.95rem;
   }
 }

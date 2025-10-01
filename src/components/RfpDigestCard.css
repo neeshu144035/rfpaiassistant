@@ -4,6 +4,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .card-header {
@@ -23,17 +24,20 @@
 
 .card-content {
   padding: var(--spacing-lg);
+  width: 100%;
 }
 
 .digest-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: var(--spacing-lg);
+  width: 100%;
 }
 
 .digest-item {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .digest-item.highlight {
@@ -51,11 +55,22 @@
 
 .field-value {
   color: var(--text-light);
+  word-break: break-word;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .digest-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .card-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 }

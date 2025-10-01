@@ -4,6 +4,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .section-header {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  width: 100%;
 }
 
 .section-header h2 {
@@ -22,6 +24,7 @@
 
 .section-content {
   padding: var(--spacing-lg);
+  width: 100%;
 }
 
 .section-content ul {
@@ -34,4 +37,29 @@
 
 .section-content li:last-child {
   margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-content {
+    padding: var(--spacing-md);
+  }
+  
+  .section-content ul {
+    padding-left: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .section-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .section-content ul {
+    padding-left: var(--spacing-md);
+  }
 }

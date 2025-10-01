@@ -5,6 +5,7 @@
   justify-content: center;
   padding: var(--spacing-2xl);
   text-align: center;
+  width: 100%;
 }
 
 .spinner {
@@ -29,4 +30,35 @@
 
 .processing-container p {
   color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .processing-container {
+    padding: var(--spacing-xl);
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .processing-container {
+    padding: var(--spacing-lg);
+  }
+  
+  .spinner {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .processing-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .processing-container p {
+    font-size: 0.9rem;
+  }
 }
