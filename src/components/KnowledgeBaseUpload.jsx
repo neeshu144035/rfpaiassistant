@@ -40,7 +40,8 @@ const KnowledgeBaseUpload = ({ onFileUpload, uploadedFile }) => {
           </div>
           <button 
             className="remove-file-btn"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               console.log('Remove button clicked in KnowledgeBaseUpload');
               onFileUpload(null);
             }}

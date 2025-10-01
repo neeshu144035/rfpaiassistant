@@ -75,4 +75,6 @@
   padding: var(--spacing-sm) var(--spacing-md);
   cursor: pointer;
   font-weight: 600;
+  z-index: 10;
+  position: relative;
 }

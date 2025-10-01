@@ -86,6 +86,8 @@
   font-weight: 600;
   flex-shrink: 0;
   margin-left: var(--spacing-md);
+  z-index: 10;
+  position: relative;
 }
 
 /* Responsive Design */
