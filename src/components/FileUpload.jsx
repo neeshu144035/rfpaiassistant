@@ -11,14 +11,26 @@ const FileUpload = ({ onFileUpload, uploadedFile }) => {
 
   const handleDrop = (e) => {
     e.preventDefault()
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      onFileUpload(e.dataTransfer.files[0])
+    if (e.dataTransfer.files) {
+      if (e.dataTransfer.files.length > 1) {
+        alert('Please upload only one file at a time.')
+        return
+      }
+      if (e.dataTransfer.files[0]) {
+        onFileUpload(e.dataTransfer.files[0])
+      }
     }
   }
 
   const handleFileInputChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      onFileUpload(e.target.files[0])
+    if (e.target.files) {
+      if (e.target.files.length > 1) {
+        alert('Please upload only one file at a time.')
+        return
+      }
+      if (e.target.files[0]) {
+        onFileUpload(e.target.files[0])
+      }
     }
   }
 
@@ -69,6 +81,7 @@ const FileUpload = ({ onFileUpload, uploadedFile }) => {
             ref={fileInputRef}
             onChange={handleFileInputChange}
             accept=".pdf"
+            multiple={false}
             style={{ display: 'none' }}
           />
         </div>
