@@ -231,6 +231,13 @@ const App = () => {
                 Update Knowledge Base
               </button>
               
+              <button 
+                className="secondary-btn"
+                onClick={showMainView}
+              >
+                Back to RFP Processing
+              </button>
+              
               {error && (
                 <div className="error-message">
                   <p>{error}</p>
