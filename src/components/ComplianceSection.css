@@ -1,0 +1,37 @@
+.compliance-section {
+  background-color: var(--white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section-header {
+  background-color: var(--light-blue);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-header h2 {
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+.section-content {
+  padding: var(--spacing-lg);
+}
+
+.section-content ul {
+  padding-left: var(--spacing-xl);
+}
+
+.section-content li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-content li:last-child {
+  margin-bottom: 0;
+}
