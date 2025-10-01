@@ -18,6 +18,13 @@ const App = () => {
   const [knowledgeBaseFile, setKnowledgeBaseFile] = useState(null)
 
   const handleFileUpload = (file) => {
+    // Handle file removal
+    if (file === null) {
+      setUploadedFile(null)
+      setError(null)
+      return
+    }
+    
     // Validate file type and size
     if (file.type !== 'application/pdf') {
       setError('Please upload a valid PDF file.')
@@ -34,6 +41,13 @@ const App = () => {
   }
 
   const handleKnowledgeBaseUpload = (file) => {
+    // Handle file removal
+    if (file === null) {
+      setKnowledgeBaseFile(null)
+      setError(null)
+      return
+    }
+    
     // Validate file type and size
     if (file.type !== 'application/pdf') {
       setError('Please upload a valid PDF file.')
